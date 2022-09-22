@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary: rgb(51, 51, 51, 0.602);
+    --secondary: #4a4aee ;
+    --light: #fff;
+    --dark: #000;
+    --diabled: #e7e7e7;
+  }
+
+
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/jpg7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+
+.formulario {
+    width: 500px;
+    height: 400px;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: rgb(51, 51, 51, 0.602);
+    text-align: center;
+    box-shadow:  1px 5px 15px rgba(64, 65, 64, 0.5) ;
+}
+
+.iconos {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding-bottom: 1.8rem;
+}
+
+.border-icon {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border: solid thin white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all .3s ease-in;
+}
+
+.centrar{
+    padding-top: 80px;
+}
+.border-icon:hover {
+    background-color: #4a4aee;
+    cursor: pointer;
+}
+
+.formulario input {
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: white thin solid;
+    text-align: center;
+    outline: none;
+    padding: .2rem 0;
+    font-size: .9rem;
+  /*  color: black;*/
+}
+.formulario input:hover{
+   background-color: #4a4aee;
+    cursor: pointer;
+    border-radius: 20px;
+}
+/*
+.formulario input[type="button"] {
+    width: 60%;
+    margin: auto;
+    border: solid thin white;
+    padding: .7rem;
+    border-radius: 2rem;
+    background-color: rgb(131, 22, 22);
+    font-weight: 600;
+    margin-top: 3rem;
+    font-size: .8rem;
+    cursor: pointer;
+   
+}*/
+
+.formulario button:hover{
+    
+    background-color: #4a4aee;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+    color: var(--light);
+    
+}
+
+.container-form-loguin [type="submit"] {
+    background-color: rgb(51, 51, 51, 0.602);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--light);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+}

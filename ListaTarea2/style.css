@@ -1,0 +1,197 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primary: rgb(51, 51, 51, 0.602);
+  --secondary: #4a4aee ;
+  --light: #fff;
+  --dark: #000;
+  --diabled: #e7e7e7;
+}
+
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  height: 100vh;
+  background-image: url(/img/jpg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.dark {
+  background: #000;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+
+.switch {
+  background-color: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active {
+  background: orangered;
+  color: #000;
+}
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}
+
+/*---------Estilos formulario de tareas----------*/
+/*
+*:first-letter {
+  text-transform: capitalize;
+}*/
+
+.roundBorder {
+  border-radius: 5px;
+}
+
+.list {
+  margin: 25px auto;
+  padding: 25px;
+  background-color:  var(--primary) ;
+  width: 100%;
+  max-width: 350px;
+  box-shadow:  1px 5px 15px rgba(64, 65, 64, 0.5) ;
+}
+  
+
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dateRight {
+  display: flex;
+  align-items: center;
+}
+
+#dateNumber {
+  font-size: 50px;
+}
+
+#dateText {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#dateMonth,
+#dateNumber,
+#dateText {
+  font-weight: bold;
+}
+
+#dateMonth,
+#dateYear {
+  margin-left: 7px;
+  font-size: 20px;
+}
+
+form {
+  margin: 20px 0;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 35px auto;
+  grid-column-gap: 15px;
+}
+
+input {
+  border: none;
+  padding-left: 10px;
+  background-color: var(--light);
+}
+
+input:focus {
+  outline: none;
+}
+
+.addTaskButton {
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.addTaskButton:hover{
+  background-color: var(--secondary);
+
+}
+.orderButton:hover{
+  background-color: var(--secondary);
+
+
+}
+
+.addTaskButton {
+  height: 35px;
+  border-radius: 50%;
+  font-size: 18px;
+  background-color: var(--diabled);
+}
+
+.orderButton {
+  border: none;
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+
+.task {
+  background-color: var(--secondary);
+  padding: 15px;
+  margin-top: 15px;
+  color: var(--light);
+  cursor: pointer;
+}
+
+
+.done {
+  background-color: var(--diabled);
+  text-decoration: line-through;
+  color: var(--dark);
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: var(--diabled);
+    transition: 0.8s ease all;
+  }
+  body.dark {
+    background: #000;
+    box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+  }
+}/*# sourceMappingURL=style.css.map */

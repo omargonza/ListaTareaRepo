@@ -1,0 +1,40 @@
+[{
+            "nombre": "SOFIA MARTINEZ",
+            "edad": 45,
+            "puesto": "Supervisor",
+            "antiguedad": 3,
+            "legajo": "8021"
+        },
+        {
+            "nombre": "TRINIDAD MONI",
+            "edad": 43,
+            "puesto": "Analista de Procesos",
+            "antiguedad": 5,
+            "legajo": "8022"
+        },
+        {
+            "nombre":"SOLEDAD MAIDANA",
+            "edad":41,
+            "puesto":"Analista de Procesos",
+            "antiguedad": 5,
+            "legajo": "8023"
+        },
+        {
+            "nombre": "GONZALO MARTINEZ",
+            "edad": 45,
+            "puesto": "Supervisor",
+            "antiguedad": 3,
+            "vacaciones": "2 semanas",
+            "legajo": "8024"
+        },
+        {
+            "nombre": "JONI QUINTANA",
+            "edad": 45,
+            "puesto": "Supervisor",
+            "antiguedad": 3,
+            "vacaciones": "2 semanas",
+            "legajo": "8025"
+        }
+
+
+    ]
