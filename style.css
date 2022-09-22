@@ -1,10 +1,8 @@
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
 
 :root {
   --primary: rgb(51, 51, 51, 0.602);
@@ -12,6 +10,7 @@
   --light: #fff;
   --dark: #000;
   --diabled: #e7e7e7;
+  --fire:red;
 }
 
 
@@ -44,7 +43,7 @@ body.dark {
   width: 30px;
   height: 30px;
   position: absolute;
-  background: #F1F1F1;
+  background: var(--light);
   top: 0;
   left: 0;
   right: unset;
@@ -53,7 +52,7 @@ body.dark {
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .switch.active {
-  background: orangered;
+  background: var(--fire);
   color: #000;
 }
 .switch.active::after {
@@ -66,11 +65,10 @@ body.dark {
   line-height: 30px;
 }
 
-/*---------Estilos formulario de tareas----------*/
-/*
+
 *:first-letter {
   text-transform: capitalize;
-}*/
+}
 
 .roundBorder {
   border-radius: 5px;
@@ -79,13 +77,10 @@ body.dark {
 .list {
   margin: 25px auto;
   padding: 25px;
-  background-color:  var(--primary) ;
+  background-color: var(--primary);
   width: 100%;
   max-width: 350px;
-  box-shadow:  1px 5px 15px rgba(64, 65, 64, 0.5) ;
 }
-  
-
 
 .date {
   display: flex;
@@ -130,40 +125,40 @@ form {
 input {
   border: none;
   padding-left: 10px;
-  background-color: var(--light);
+  background-color: var(--diabled);
 }
 
 input:focus {
   outline: none;
 }
 
-.addTaskButton {
+.addTaskButton,
+.orderButton {
   border: none;
   font-weight: bold;
   cursor: pointer;
-}
-
-.addTaskButton:hover{
-  background-color: var(--secondary);
-
-}
-.orderButton:hover{
-  background-color: var(--secondary);
-
-
 }
 
 .addTaskButton {
   height: 35px;
   border-radius: 50%;
   font-size: 18px;
-  background-color: var(--diabled);
+  background-color: var(--primary);
+  
+}
+
+.addTaskButton:hover {
+background-color: var(--fire);
 }
 
 .orderButton {
-  border: none;
   background-color: var(--primary);
   color: var(--light);
+  
+}
+
+.orderButton:hover{
+  background-color: var(--secondary);
 }
 
 
@@ -176,11 +171,6 @@ input:focus {
 }
 
 
-.done {
-  background-color: var(--diabled);
-  text-decoration: line-through;
-  color: var(--dark);
-}
 
 @media screen and (max-width: 650px) {
   body {

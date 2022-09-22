@@ -3,7 +3,7 @@ const cargarUsuarios= async()=> {
     //como la funcion va a tener una promesa, utilizamos el async y await para trabajarla
 
     try{//tambien utilizamos el try en caso de tener una respuesta positivia
-        const peticion = await fetch("./ListaTarea2/empleados.json")//realizamos el fetch con la url que corresponde
+        const peticion = await fetch("./empleados.json")//realizamos el fetch con la url que corresponde
         if(peticion.status === 200){//si nos da un status de 200 es decir que se realizo
             const datos = await peticion.json();//tranformamos esa promesa a un objeto
             let arrayUsuarios = datos.map((usuario)=>{//luego mapeamos ese obejeto en un nuevo array
@@ -46,7 +46,7 @@ function guardarUsuario(nombre,pass){
     //luego lo guarda en el localStorage , volviendo a string primero
     localStorage.setItem("usuario",JSON.stringify(usuarioActual))
     //y luego te redirige a la lista de tarea
-    window.location.href = "./ListaTarea2/index.html";
+    window.location.href = "./index.html";
 }
 
 
