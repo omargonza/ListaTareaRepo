@@ -11,6 +11,7 @@
     --light: #fff;
     --dark: #000;
     --diabled: #e7e7e7;
+    --fire:red;
   }
 
 
@@ -20,7 +21,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(img/jpg7.jpg);
+    background-image: url(./img/jpg7.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

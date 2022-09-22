@@ -13,12 +13,11 @@
   --fire:red;
 }
 
-
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
   height: 100vh;
-  background-image: url(/img/jpg1.jpg);
+  background-image: url(img/jpg1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,7 +42,7 @@ body.dark {
   width: 30px;
   height: 30px;
   position: absolute;
-  background: var(--light);
+  background: #F1F1F1;
   top: 0;
   left: 0;
   right: unset;
@@ -52,7 +51,7 @@ body.dark {
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .switch.active {
-  background: var(--fire);
+  background: orangered;
   color: #000;
 }
 .switch.active::after {
@@ -65,7 +64,6 @@ body.dark {
   line-height: 30px;
 }
 
-
 *:first-letter {
   text-transform: capitalize;
 }
@@ -77,7 +75,7 @@ body.dark {
 .list {
   margin: 25px auto;
   padding: 25px;
-  background-color: var(--primary);
+  background-color: var(--light);
   width: 100%;
   max-width: 350px;
 }
@@ -144,33 +142,37 @@ input:focus {
   border-radius: 50%;
   font-size: 18px;
   background-color: var(--primary);
-  
 }
 
-.addTaskButton:hover {
-background-color: var(--fire);
+.addTaskButton:hover{
+  background-color: var(--fire);
 }
-
 .orderButton {
-  background-color: var(--primary);
-  color: var(--light);
-  
-}
-
-.orderButton:hover{
   background-color: var(--secondary);
+  color: var(--light);
 }
-
+body.dark .orderButton {
+  background: orangered;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
 
 .task {
-  background-color: var(--secondary);
+  background-color: var(--primary);
   padding: 15px;
   margin-top: 15px;
   color: var(--light);
   cursor: pointer;
 }
+body.dark .task {
+  background-color: orangered;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
 
-
+.done {
+  background-color: var(--diabled);
+  text-decoration: line-through;
+  color: var(--dark);
+}
 
 @media screen and (max-width: 650px) {
   body {

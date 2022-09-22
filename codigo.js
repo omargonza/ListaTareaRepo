@@ -1,7 +1,7 @@
 
 //con esta funcion corrobora que este registrado y evite que se ingrese primero a esta pagina
 const init= ()=>{
-    localStorage.getItem("usuario") === null ? window.location.href = "../login.html" : console.log("bienvenido")
+    localStorage.getItem("usuario") === null ? window.location.href = "./login.html" : console.log("bienvenido")
 }
 document.addEventListener("DOMContentLoaded",init)
 
