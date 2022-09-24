@@ -1,21 +1,19 @@
 
-//con esta funcion corrobora que este registrado y evite que se ingrese primero a esta pagina
+//---------- Creamos una funcion que corrobora que este registrado y evite que se ingrese primero a esta pagina -------------
+
 const init= ()=>{
-    localStorage.getItem("usuario") === null ? window.location.href = "./login.html" : console.log("bienvenido")
+    localStorage.getItem("usuario") === null ? window.location.href = "login.html" : console.log("bienvenido")
 }
 document.addEventListener("DOMContentLoaded",init)
 
-// Info date
+//-----------------------  Info date -------------------
 const dateNumber = document.getElementById('dateNumber');
 const dateText = document.getElementById('dateText');
 const dateMonth = document.getElementById('dateMonth');
 const dateYear = document.getElementById('dateYear');
 
-// Tasks Container
+//------------------- Tasks Container -------------------
 const tasksContainer = document.getElementById('tasksContainer');
-
-
-
 const setDate = () => {
     const date = new Date();
     dateNumber.textContent = date.toLocaleString('es', { day: 'numeric' });
@@ -25,7 +23,7 @@ const setDate = () => {
 };
 
 
-
+//------------ Creamos un evento para agregar las tareas ------------
 const addNewTask = event => {
     event.preventDefault();
     const { value } = event.target.taskText;
@@ -39,18 +37,18 @@ const addNewTask = event => {
     event.target.reset();
     localStorage.setItem("task",JSON.stringify(value));
     Swal.fire({
+        
         position: `button`,
         title: 'Exito',
         text: 'Tarea agregada',
         icon: 'success',
         confirmButtonText: 'ok',
-        timer: 3000
-
+        timer: `3000`,
+        background: `grey`,
+        timerProgressBar: true,
       })
 
 }
-
-
 
 localStorage.setItem("task", "text")
 
@@ -74,14 +72,14 @@ const renderOrderedTasks = () => {
 
 setDate();
 
-//-------------------BOTON SWITCH-------------------------
+//------------------- Boton switch -------------------------
 const btnswitch = document.querySelector(`#switch`);
 
 btnswitch.addEventListener(`click`, () => {
     document.body.classList.toggle(`dark`);
     btnswitch.classList.toggle(`active`);
 
-    //-------------------LOCALSTORAGE------------------------
+    //-------------------Local storage------------------------
     if (document.body.classList.contains(`dark`)) {
         localStorage.setItem(`dark-mode`, `true`);
     } else {
@@ -89,7 +87,7 @@ btnswitch.addEventListener(`click`, () => {
     }
 });
 
-//----------------OBTENEMOS EL MODO ACTUAL------------------
+//----------------Obtenemos el modo actual------------------
 if (localStorage.getItem(`dark-mode`) === `true`) {
     document.body.classList.add(`dark`);
     btnswitch.classList.add(`active`);

@@ -1,9 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 :root {
   --primary: rgb(51, 51, 51, 0.602);
   --secondary: #4a4aee ;
@@ -11,6 +5,12 @@
   --dark: #000;
   --diabled: #e7e7e7;
   --fire:red;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -28,6 +28,7 @@ body.dark {
 }
 
 .switch {
+  margin: 25px 25px;
   background-color: #343d5b;
   border-radius: 1000px;
   border: none;
@@ -51,7 +52,7 @@ body.dark {
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .switch.active {
-  background: orangered;
+  background: var(--fire);
   color: #000;
 }
 .switch.active::after {
@@ -142,18 +143,22 @@ input:focus {
   border-radius: 50%;
   font-size: 18px;
   background-color: var(--primary);
-}
-
-.addTaskButton:hover{
-  background-color: var(--fire);
-}
-.orderButton {
-  background-color: var(--secondary);
   color: var(--light);
 }
-body.dark .orderButton {
-  background: orangered;
-  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+
+.addTaskButton:hover {
+  background-color: var(--secondary);
+  color: var(--dark);
+}
+
+.orderButton:hover {
+  background-color: var(--secondary);
+  color: var(--dark);
+}
+
+.orderButton {
+  background-color: var(--primary);
+  color: var(--light);
 }
 
 .task {
@@ -163,11 +168,10 @@ body.dark .orderButton {
   color: var(--light);
   cursor: pointer;
 }
-body.dark .task {
-  background-color: orangered;
-  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
-}
 
+.task:hover{
+  background-color: var(--secondary);
+}
 .done {
   background-color: var(--diabled);
   text-decoration: line-through;

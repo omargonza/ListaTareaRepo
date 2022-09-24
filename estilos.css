@@ -21,7 +21,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(./img/jpg7.jpg);
+    background-image: url(img/jpg7.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,27 +80,14 @@ body {
     outline: none;
     padding: .2rem 0;
     font-size: .9rem;
-  /*  color: black;*/
+  
 }
+
 .formulario input:hover{
    background-color: #4a4aee;
     cursor: pointer;
     border-radius: 20px;
 }
-/*
-.formulario input[type="button"] {
-    width: 60%;
-    margin: auto;
-    border: solid thin white;
-    padding: .7rem;
-    border-radius: 2rem;
-    background-color: rgb(131, 22, 22);
-    font-weight: 600;
-    margin-top: 3rem;
-    font-size: .8rem;
-    cursor: pointer;
-   
-}*/
 
 .formulario button:hover{
     
